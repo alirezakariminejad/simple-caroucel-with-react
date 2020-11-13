@@ -1,125 +1,222 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-
-* {
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #28223f;
-  font-family: Montserrat, sans-serif;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  min-height: 100vh;
-  margin: 0;
-}
-
-h3 {
-  margin: 10px 0;
-}
-
-h6 {
-  margin: 5px 0;
-  text-transform: uppercase;
-}
-
-p {
-  font-size: 14px;
-  line-height: 21px;
-}
-
-.card-container {
-  background-color: #231e39;
-  border-radius: 5px;
-  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
-  color: #b3b8cd;
-  padding-top: 30px;
-  position: relative;
-  width: 350px;
-  max-width: 100%;
-  text-align: center;
-}
-
-.card-container .pro {
-  color: #231e39;
-  background-color: #febb0b;
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 3px 7px;
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
-.card-container .round {
-  border: 1px solid #03bfcb;
-  border-radius: 50%;
-  padding: 7px;
-  width: 100px;
-}
-
-button.primary {
-  background-color: #03bfcb;
-  border: 1px solid #03bfcb;
-  border-radius: 3px;
-  color: #231e39;
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  padding: 10px 25px;
-}
-
-button.primary.ghost {
-  background-color: transparent;
-  color: #02899c;
-}
-
-.skills {
-  background-color: #1f1a36;
-  text-align: left;
-  padding: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8c7a7a), color-stop(65%, #af877c), to(#af877c)) fixed;
+  background: linear-gradient(to bottom, #8c7a7a 0%, #af877c 65%, #af877c 100%) fixed;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/coc-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font: 14px/20px "Lato", Arial, sans-serif;
+  color: #9E9E9E;
   margin-top: 30px;
 }
 
-.skills ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.skills ul li {
-  border: 1px solid #2d2747;
-  border-radius: 2px;
-  display: inline-block;
-  font-size: 12px;
-  margin: 0 7px 7px 0;
-  padding: 7px;
-}
-
-footer {
-  background-color: #222;
-  color: #fff;
-  font-size: 14px;
-  bottom: 0;
-  position: fixed;
-  left: 0;
-  right: 0;
+.slide-container {
+  margin: auto;
+  width: 600px;
   text-align: center;
+}
+
+.wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.wrapper:focus {
+  outline: 0;
+}
+
+.clash-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: 19px;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+}
+
+.clash-card__image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.clash-card__image--barbarian {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg");
+}
+.clash-card__image--barbarian img {
+  width: 400px;
+  position: absolute;
+  top: -65px;
+  left: -70px;
+}
+
+.clash-card__image--archer {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg");
+}
+.clash-card__image--archer img {
+  width: 400px;
+  position: absolute;
+  top: -34px;
+  left: -37px;
+}
+
+.clash-card__image--giant {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/giant-bg.jpg");
+}
+.clash-card__image--giant img {
+  width: 340px;
+  position: absolute;
+  top: -30px;
+  left: -25px;
+}
+
+.clash-card__image--goblin {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/goblin-bg.jpg");
+}
+.clash-card__image--goblin img {
+  width: 370px;
+  position: absolute;
+  top: -21px;
+  left: -37px;
+}
+
+.clash-card__image--wizard {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/wizard-bg.jpg");
+}
+.clash-card__image--wizard img {
+  width: 345px;
+  position: absolute;
+  top: -28px;
+  left: -10px;
+}
+
+.clash-card__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.clash-card__level--barbarian {
+  color: #EC9B3B;
+}
+
+.clash-card__level--archer {
+  color: #EE5487;
+}
+
+.clash-card__level--giant {
+  color: #F6901A;
+}
+
+.clash-card__level--goblin {
+  color: #82BB30;
+}
+
+.clash-card__level--wizard {
+  color: #4FACFF;
+}
+
+.clash-card__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.clash-card__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.clash-card__unit-stats--barbarian {
+  background: #EC9B3B;
+}
+.clash-card__unit-stats--barbarian .one-third {
+  border-right: 1px solid #BD7C2F;
+}
+
+.clash-card__unit-stats--archer {
+  background: #EE5487;
+}
+.clash-card__unit-stats--archer .one-third {
+  border-right: 1px solid #D04976;
+}
+
+.clash-card__unit-stats--giant {
+  background: #F6901A;
+}
+.clash-card__unit-stats--giant .one-third {
+  border-right: 1px solid #de7b09;
+}
+
+.clash-card__unit-stats--goblin {
+  background: #82BB30;
+}
+.clash-card__unit-stats--goblin .one-third {
+  border-right: 1px solid #71a32a;
+}
+
+.clash-card__unit-stats--wizard {
+  background: #4FACFF;
+}
+.clash-card__unit-stats--wizard .one-third {
+  border-right: 1px solid #309eff;
+}
+
+.clash-card__unit-stats {
+  color: white;
+  font-weight: 700;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+.clash-card__unit-stats .one-third {
+  width: 33%;
+  float: left;
+  padding: 20px 15px;
+}
+.clash-card__unit-stats sup {
+  position: absolute;
+  bottom: 4px;
+  font-size: 45%;
+  margin-left: 2px;
+}
+.clash-card__unit-stats .stat {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.clash-card__unit-stats .stat-value {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+}
+.clash-card__unit-stats .no-border {
+  border-right: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.slick-prev {
+  left: 100px;
   z-index: 999;
 }
 
-footer p {
-  margin: 10px 0;
-}
-
-footer i {
-  color: red;
-}
-
-footer a {
-  color: #3c97bf;
-  text-decoration: none;
+.slick-next {
+  right: 100px;
+  z-index: 999;
 }
