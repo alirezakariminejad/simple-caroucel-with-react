@@ -1,6 +1,8 @@
-import React from "react";
-import IpInfo from "./Components/IpInfo";
+import React, { useState, useEffect } from "react";
 
 export default function App() {
-  return <IpInfo />;
+  return (
+    <>
+    </>
+  );
 }
