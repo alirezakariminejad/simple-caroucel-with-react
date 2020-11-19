@@ -3,21 +3,15 @@ import CardFooter from "./CardFooter";
 import CardImage from "./CardImage";
 import CardItem from "./CardItem";
 
-export default function Card() {
+export default function Card({ hero }) {
   return (
     <div className="wrapper">
       <div className="clash-card barbarian">
-        
-        <CardImage />
-
-        <CardItem clsName="clash-card__level clash-card__level--barbarian">Level 4</CardItem>
-        <CardItem clsName="clash-card__unit-name">The Barbarian</CardItem>
-        <CardItem clsName="clash-card__unit-description">
-          The Barbarian is a kilt-clad Scottish warrior with an angry, battle-ready expression, hungry for destruction. He has Killer yellow horseshoe mustache.
-        </CardItem>
-
-        <CardFooter />
-
+        <CardImage src={hero.img} name={hero.name} />
+        <CardItem clsName={`clash-card__level clash-card__level--${hero.name}`}>{hero.level}</CardItem>
+        <CardItem clsName="clash-card__unit-name">{hero.name}</CardItem>
+        <CardItem clsName="clash-card__unit-description">{hero.description}</CardItem>
+        <CardFooter units={hero.units} name={hero.name} />
       </div>
     </div>
   );

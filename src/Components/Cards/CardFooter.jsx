@@ -1,12 +1,7 @@
 import React from "react";
 import CardFooterState from "./CardFooterState";
 
-export default function CardFooter() {
-  return (
-    <div className="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
-      <CardFooterState stat="20" statValue="Training" />
-      <CardFooterState stat="16" statValue="Speed" />
-      <CardFooterState stat="150" statValue="Cost" />
-    </div>
-  );
+export default function CardFooter({ units, name }) {
+  const unitsValue = units.map((unit, index) => <CardFooterState stat={unit.state} statValue={unit.value} noBorder={index === units.length - 1} />);
+  return <div className={`clash-card__unit-stats clash-card__unit-stats--${name} clearfix`}>{unitsValue}</div>;
 }

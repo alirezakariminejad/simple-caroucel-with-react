@@ -1,8 +1,12 @@
 import React from "react";
 
-export default function CardFooterState({ stat, statValue }) {
+export default function CardFooterState({ stat, statValue, noBorder }) {
+  let className = "one-third ";
+  if (noBorder) {
+    className += "no-border";
+  }
   return (
-    <div className="one-third no-border">
+    <div className={className}>
       <div className="stat">{stat}</div>
       <div className="stat-value">{statValue}</div>
     </div>
